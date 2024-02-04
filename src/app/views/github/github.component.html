@@ -1,0 +1,19 @@
+<!-- Vista GitHub -->
+<div class="github">
+    <div class="menu">
+        <h2>Menu</h2>
+        <nav>
+            <ul>
+                <li><a (click)="getResponse()">Ver perfiles</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        @for (user of users; track user; let i = $index) {
+
+        <img src="{{user.avatar_url}}" alt="{{i}}">
+        <h1>{{user.login}}</h1>
+
+        }
+    </div>
+</div>

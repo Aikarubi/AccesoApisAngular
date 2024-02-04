@@ -1,0 +1,11 @@
+<div class="memigo">
+    <section>
+
+        <div class="grid">
+            @for (meme of memes; track meme) {
+            <app-card [photo]="'url(' + meme.url + ')'" [title]="meme.name"></app-card>
+            }
+        </div>
+
+    </section>
+</div>

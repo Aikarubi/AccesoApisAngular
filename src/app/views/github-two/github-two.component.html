@@ -1,0 +1,18 @@
+<div class="github">
+    <div class="menu">
+        <div>
+            @for (user of users; track user; let i = $index) {
+
+            <img (click)="openModal(i)" src="{{user.avatar_url}}" alt="{{i}}">
+            <h1>{{user.login}}</h1>
+
+            }
+        </div>
+    </div>
+
+    <div [ngClass]=modal>
+        <div class="modal-content" [ngStyle]="{'backgroundImage': modalPhoto}">
+            <span (click)="closeModal()" class="close-button">×</span>
+            <h1>{{modalTitle}}</h1>
+        </div>
+    </div>

@@ -1,0 +1,15 @@
+<div class="memigo">
+    <section>
+
+        <div class="grid">
+
+            <app-card (modal)="onClick($event)" [photo]="photo" [title]="title"></app-card>
+
+        </div>
+        <button (click)="changeMeme(-1)">Anterior</button><button (click)="changeMeme(+1)">Siguiente</button>
+        <!--<button (click)="previous()">Anterior</button><button (click)="next()">Siguiente</button> -->
+    </section>
+
+</div>
+
+<app-modal (modal)="closeModal($event)" [title]="title" [photo]="photo" [modalClass]="class"></app-modal>
